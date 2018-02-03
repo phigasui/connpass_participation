@@ -1,0 +1,24 @@
+{
+  "name": "ConnpassParticipationGenerator",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["https://*.connpass.com/*/*/participation/*"],
+    "js": ["js/bundle.js"]
+  }],
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "clipboardRead"
+  ],
+  "icons": {
+    "16" : "icons/icon16.png",
+    "32" : "icons/icon32.png",
+    "48" : "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
